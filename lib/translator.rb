@@ -1,9 +1,6 @@
 # require modules here
 require "yaml"
 
-
-
-
 def load_library(path)
   emoticons = YAML.load_file(path)
   list = {}
@@ -22,8 +19,6 @@ def load_library(path)
 end
 
 
-
-
 def get_japanese_emoticon(path,emoji)
   list = load_library(path)
   if list[:get_emoticon][emoji]
@@ -31,8 +26,6 @@ def get_japanese_emoticon(path,emoji)
   else p 'Sorry, that emoticon was not found'
   end
 end
-
-
 
 
 def get_english_meaning(path,emoji)
